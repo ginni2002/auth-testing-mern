@@ -19,12 +19,7 @@ app.use(express.json());
 app.use("/api/user", router);
 app.use("/api/auth", authRouter);
 
-// Error handling middleware program
-app.use((err, req, res, next) => {
-  const statusCode = err.statusCode || 500;
-  const message = err.message || "Internal Server Error";
-  return res.status(statusCode).json({ success: false, message, statusCode });
-});
+app.use((err, req, res, next) => {});
 
 app.listen(3000, () => {
   console.log("Server listening on port 3000");
