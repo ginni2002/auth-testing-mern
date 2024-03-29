@@ -14,7 +14,7 @@ mongoose
   });
 
 const app = express();
-app.use(express.json());
+app.use(express.json);
 
 app.use("/api/user", router);
 app.use("/api/auth", authRouter);
