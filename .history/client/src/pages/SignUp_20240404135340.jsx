@@ -73,17 +73,15 @@ export default function SignUp() {
             <div>
               <button
                 type="submit"
-                className="flex w-full justify-center rounded-md bg-green-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-red-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                className="flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
               >
                 Sign Up
               </button>
             </div>
           </form>
-          <div className="flex gap-2 mt-5">
+          <div className="">
             <p>Have an account?</p>
-            <Link to="/sign-in">
-              <span className="text-blue-500">Sign In</span>
-            </Link>
+            <span className="text-blue-500"></span>
           </div>
         </div>
       </div>
