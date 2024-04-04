@@ -15,12 +15,12 @@ module.exports.signup = async (req, res, next) => {
     console.log("User created!!");
     res.status(201).json({ message: "User created successfully" });
   } catch (err) {
-    // console.log(
-    //   errorHandler(
-    //     999,
-    //     "Error occured while adding User in database during signup process"
-    //   )
-    // );
+    console.log(
+      errorHandler(
+        999,
+        "Error occured while adding User in database during signup process"
+      )
+    );
     next(err);
   }
 };
