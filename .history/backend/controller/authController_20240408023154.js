@@ -43,12 +43,11 @@ module.exports.signin = async (req, res, next) => {
       return next(errorHandler(401, "Wrong Credentials"));
     }
     const token = jwt.sign({ id: validUser._id }, process.env.JWT_SECRET);
-    const { password: hashedPassword, ...rest } = validUser._doc;
-    const expiryDate = new Date(Date.now() + 3600000); // 1 hour
+const {password:hashedPassword, ...rest}
     res
-      .cookie("access_token", token, { httpOnly: true, expires: expiryDate })
+      .cookie("access_token", token, { httpOnly: true })
       .status(200)
-      .json(rest);
+      .json(validUser);
   } catch (err) {
     next(err);
   }
